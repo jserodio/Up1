@@ -8,15 +8,15 @@ It has the ability to view images, text with syntax highlighting, short videos, 
 
 Public Server
 ---
-We currently run a public, free to use server at https://up1.ca.
+My currently public free-to-use server at https://up.joseserodio.es or http://up.joseserodio.es
 
-Example image: https://up1.ca/#hsd2mdSuIkzTUR6saZpn1Q - [(source)](https://www.ashleymills.com/node/8). *Hint: Try double-clicking on the image, and dragging around the image to zoom in and out, RES-style!*
+Example image: https://up.joseserodio.es/#PMi9cRR5jE6Lhi-cMVV09w - [(source)](https://www.ashleymills.com/node/8). *Hint: Try double-clicking on the image, and dragging around the image to zoom in and out, RES-style!*
 
-Example text paste: https://up1.ca/#_H7Wy9atfl2CW_cYx6Xh9A - [(source)](http://www.publicdomainpoems.com/ocaptainmycaptain.html)
+Example text paste: https://up.joseserodio.es/#-qf0tV85WavDIex4j9f5rw - [(source)](http://www.publicdomainpoems.com/ocaptainmycaptain.html)
 
-Example short video: https://up1.ca/#55s3dQnPjtcgstvspdYT5g - [(source)](https://youtu.be/O6Xo21L0ybE)
+Example short video: https://up.joseserodio.es/#uNrUSeuQb-mF_wxLY01-iQ - [(source)](https://youtu.be/O6Xo21L0ybE)
 
-Example download file: https://up1.ca/#Nmo7tW7Qi8ga0UORVZ-zUw - [(source)](https://github.com/Upload/ShareX/releases/tag/v9.10.1)
+Example download file: https://up.joseserodio.es/#jtVfnQTCbiI5ztQxq__s9g - [(source)](https://github.com/Upload/ShareX/releases/tag/v9.10.1)
 
 This server is open to all users, so feel free to upload your own files.
 
@@ -29,7 +29,7 @@ Quick start
 To install and run the server with default settings:
 
     apt-get install nodejs
-    git clone https://github.com/Upload/Up1
+    git clone https://github.com/jserodio/Up1
     cd Up1
     cp server/server.conf.example server/server.conf
     cp client/config.js.example client/config.js
@@ -37,7 +37,7 @@ To install and run the server with default settings:
     npm install
     node server.js
 
-Server configuration is done through the [`server.conf`](https://github.com/Upload/Up1/server.conf.example) file. For a quick start, simply move `server.conf.example` to `server.conf`.
+Server configuration is done through the [`server.conf`](https://github.com/jserodio/Up1/blob/master/server/server.conf.example) file. For a quick start, simply move `server.conf.example` to `server.conf`.
 
 `listen` is an `address:port`-formatted string, where either one are optional. Some examples include `":9000"` to listen on any interface, port 9000; `"1.2.3.4"` to listen on localhost port 80; `"1.1.1.1:8080"` to listen on 1.1.1.1 port 8080; or even `""` to listen on any interface, port 80.
 
@@ -51,7 +51,7 @@ There are three additional sections in the configuration file: `http`, `https` a
 
 `cloudflare-cache-invalidate` is disabled by default and only useful if you choose to run the Up1 server behind Cloudflare. When this section is enabled, it ensures that when an upload is deleted, Cloudflare doesn't hold on to copies of the upload on its edge servers by sending an API call to invalidate it.
 
-For the web application configuration, a [`config.js.example`](https://github.com/Upload/Up1/config.js.example) file is provided. Make sure the `api_key` here matches the one in `server.conf`.
+For the web application configuration, a [`config.js.example`](https://github.com/jserodio/Up1/blob/master/client/config.js.example) file is provided. Make sure the `api_key` here matches the one in `server.conf`.
 
 External Tools
 ---
